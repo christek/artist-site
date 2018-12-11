@@ -1,0 +1,5 @@
+.Menu-item {
+  border: 1px solid red;
+  display: inline-block;
+  padding: 30px;
+}
