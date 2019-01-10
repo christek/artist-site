@@ -1,6 +1,9 @@
 import React from 'react';
 
 import Listings from './Listings';
+import Map from './Map';
+
+import styles from './Cols.module.css';
 
 const data = [{
   price: '300,000',
@@ -27,7 +30,14 @@ const data = [{
 const Buy = (props) => (
   <div>
     <h1>Buy</h1>
-    <Listings data={data} />
+    <div className={styles.container}>
+      <div>
+        <Listings data={data} />
+      </div>
+      <div>
+        <Map />
+      </div>
+    </div>
   </div>
 );
 
