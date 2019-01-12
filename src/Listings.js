@@ -1,10 +1,9 @@
 import React from 'react';
 
-import styles from './Listing.module.css'; // Import css modules stylesheet as styles
-
-const divStyle = {
-  width: '33%',
-  float: 'left'
+const cardStyle = {
+  width: '32%',
+  float: 'left',
+  margin: '0 7px 7px 0'
 };
 
 const imgStyle = {
@@ -16,8 +15,8 @@ const Listings = (props) => (
   <ul>
     {props.data.map(function (name, index) {
       const fullImg = '/img/' + name.img;
-      return <div className="card" style={divStyle}>
-        <div key={index}><img className="card-img-top" style={imgStyle} src={fullImg} /></div>
+      return <div className="card" key={index} style={cardStyle}>
+        <div key={index}><img className="card-img-top" style={imgStyle} src={fullImg} alt='property' /></div>
         <div className="card-body">
           <h5 className="card-title">${name.price}</h5>
           <p className="card-text">{name.address}</p>

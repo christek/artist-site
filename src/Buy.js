@@ -3,8 +3,6 @@ import React from 'react';
 import Listings from './Listings';
 import Map from './Map';
 
-import styles from './Cols.module.css';
-
 const data = [{
   price: '300,000',
   address: '11 hyde rd',
