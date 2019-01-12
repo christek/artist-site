@@ -28,16 +28,13 @@ const data = [{
 }];
 
 const Buy = (props) => (
-  <div>
-    <h1>Buy</h1>
-    <div className={styles.container}>
-      <div>
+  <div className="row">
+      <div className="col-6">
         <Listings data={data} />
       </div>
-      <div>
+      <div className="col-6">
         <Map />
       </div>
-    </div>
   </div>
 );
 
