@@ -9,3 +9,7 @@
 .rightcolumn {
     border: 1px solid red;
 }
+
+.box {
+    width: 33%;
+}
