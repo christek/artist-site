@@ -4,6 +4,7 @@ import Listings from './Listings';
 import Map from './Map';
 
 const data = [{
+  id: 'abc',
   price: '300,000',
   address: '11 hyde rd',
   img: 'a.jpg',
@@ -11,6 +12,7 @@ const data = [{
   bathrooms: 4,
 },
 {
+  id: 'def',
   price: '500,000',
   address: '12 hyde rd',
   img: 'b.jpg',
@@ -18,6 +20,7 @@ const data = [{
   bathrooms: 4,
 },
 {
+  id: 'ghi',
   price: '400,000',
   address: '13 hyde rd',
   img: 'c.jpg',
