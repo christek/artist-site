@@ -2,3 +2,4 @@
 - create rest moack that represents real life listings
 - consider search functionality
 - design layout - aesthetically pleasing
+- expand on json server

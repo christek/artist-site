@@ -1,0 +1,8 @@
+{
+    "posts": [
+      { "id": 1, "price": "300,000", "address": "111 hyde rd", "img": "a.jpg", "bedrooms": "3", "bathrooms": "4" },
+      { "id": 2, "price": "400,000", "address": "112 hyde rd", "img": "b.jpg", "bedrooms": "2", "bathrooms": "4" },
+      { "id": 3, "price": "260,000", "address": "113 hyde rd", "img": "c.jpg", "bedrooms": "3", "bathrooms": "4" }
+    ],
+    "profile": { "name": "typicode" }
+  }
