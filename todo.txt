@@ -1,5 +1,8 @@
+- make details page work
+
+
 - add nice header
 - create rest moack that represents real life listings
 - consider search functionality
 - design layout - aesthetically pleasing
-- expand on json server
+- expand on json server     json-server --watch db.json --port 3004

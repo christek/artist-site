@@ -20,7 +20,7 @@ const Listings = (props) => (
       return <div className="card" key={index} style={cardStyle}>
 
         <Link to={`/properties/${name.id}`}>go to this</Link>
-        <Route path="/property" component={Property} />
+    
 
         <div key={index}><img className="card-img-top" style={imgStyle} src={fullImg} alt='property' /></div>
         <div className="card-body">
