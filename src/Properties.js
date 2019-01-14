@@ -13,12 +13,62 @@ const Properties = ({ match }) => (
   </div>
 );
 
-function Child({ match }) {
-  return (
-    <div>
-      <h3>ID: {match.params.id}</h3>
+class Child extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      error: null,
+      isLoaded: false,
+      item: {}
+    };
+  }
+
+  componentDidMount() {
+    fetch(`http://localhost:3004/posts/${this.props.match.params.id}`)
+      .then(res => res.json())
+      .then(
+        (result) => {
+          this.setState({
+            isLoaded: true,
+            item: result
+          });
+        },
+        // Note: it's important to handle errors here
+        // instead of a catch() block so that we don't swallow
+        // exceptions from actual bugs in components.
+        (error) => {
+          this.setState({
+            isLoaded: true,
+            error
+          });
+        }
+      )
+  }
+
+  render() {
+    const { error, isLoaded, items } = this.state;
+    if (error) {
+      return <div>Error: {error.message}</div>;
+    } else if (!isLoaded) {
+      return <div>Loading...</div>;
+    } else {
+      const fullImg = '/img/' + this.state.item.img;
+      return (
+        <div className="row">   
+        <div className="col-6">
+          <p>${this.state.item.price}</p>
+          <p>${this.state.item.address}</p>
+          <p>${this.state.item.bedrooms}</p>
+          <p>${this.state.item.bathrooms}</p>
+        </div>
+        <div className="col-6">
+          <img src={fullImg} />
+        </div>
     </div>
-  );
+      );
+    }
+  }
 }
+
 
 export default Properties;
