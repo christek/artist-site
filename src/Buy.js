@@ -44,10 +44,10 @@ class Buy extends React.Component {
     } else {
       return (
         <div className="row">   
-        <div className="col-6">
+        <div className="col-sm">
           <Listings data={items} />
         </div>
-        <div className="col-6">
+        <div className="col-sm">
           <Map />
         </div>
     </div>

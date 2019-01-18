@@ -1,9 +1,8 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import Property from './Property';
+import { BrowserRouter as Route, Link } from "react-router-dom";
 
 const cardStyle = {
-  width: '32%',
+  width: '31%',
   float: 'left',
   margin: '0 7px 7px 0'
 };

@@ -1,6 +1,5 @@
 import React from 'react';
-import Property from './Property';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 const Properties = ({ match }) => (
   <div>   
@@ -55,13 +54,13 @@ class Child extends React.Component {
       const fullImg = '/img/' + this.state.item.img;
       return (
         <div className="row">   
-        <div className="col-6">
+        <div className="col-sm">
           <p>${this.state.item.price}</p>
           <p>${this.state.item.address}</p>
           <p>${this.state.item.bedrooms}</p>
           <p>${this.state.item.bathrooms}</p>
         </div>
-        <div className="col-6">
+        <div className="col-sm">
           <img src={fullImg} />
         </div>
     </div>
